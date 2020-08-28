@@ -1,8 +1,10 @@
-package junil.web.springboot;
+package junil.web_service.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+@EnableJpaAuditing
 @SpringBootApplication // 자동 설정, Spring Bean 생성과 읽기가 모두 자동, program 의 시작
 public class Application {
     public static void main(String[] args) {

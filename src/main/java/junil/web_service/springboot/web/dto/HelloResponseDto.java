@@ -1,4 +1,4 @@
-package junil.web.springboot.controller.dto;
+package junil.web_service.springboot.web.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

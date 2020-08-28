@@ -1,4 +1,4 @@
-package junil.web.springboot.controller;
+package junil.web_service.springboot.web;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +12,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class) // Springboot 와 JUnit 사이의 연결자 역할을 한다.
 @WebMvcTest(controllers = HelloController.class) // Controller 테스트를 위해 사용한다.
