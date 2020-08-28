@@ -1,4 +1,4 @@
-package junil.web_service.springboot.web;
+package junil.web_service.springboot.web.controller;
 
 import junil.web_service.springboot.web.dto.HelloResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -5,6 +5,10 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * PostsApiController 에서 사용한다. 따라서 default 생성자가 필요하다.
+ * client 가 http body 에 담아 보낸 json 이 spring 에 의해 PostsSaveRequestDto 으로 변환된다.
+ */
 @Getter
 @NoArgsConstructor
 public class PostsSaveRequestDto {

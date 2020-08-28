@@ -1,14 +1,14 @@
 package junil.web_service.springboot.domain.posts;
 
 import junil.web_service.springboot.domain.BaseTimeEntity;
-import junil.web_service.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-/* Entity class 에서는 절대 Setter 를 만들지 않는다.
+/**
+ * Entity class 에서는 절대 Setter 를 만들지 않는다.
  * 필드의 값 변경이 필요한 경우 목적과 의도를 나타낸 method 를 추가한다.
  * 도메인 계층과 웹 계층은 분리되어야 한다.
  * Entity 는 결코 웹 계층(Request/Response)에서 사용하지 않는다.
@@ -17,11 +17,8 @@ import javax.persistence.*;
  * 화면 수정이 테이블에 영향을 주어서는 안된다.
  */
 
-// 수정이 쉽도록 필수 annotation 을 class 에 가깝게 둔다.
-// Lombok
 @Getter
 @NoArgsConstructor
-// JPA
 @Entity
 public class Posts extends BaseTimeEntity {
     @Id
@@ -43,9 +40,9 @@ public class Posts extends BaseTimeEntity {
         this.author = author;
     }
 
-    public Long update(PostsUpdateRequestDto updateDto) {
-        this.title = updateDto.getTitle();
-        this.content = updateDto.getContent();
-        return id;
+    public Long update(String title, String content) {
+        this.title = title;
+        this.content = content;
+        return this.id;
     }
 }
